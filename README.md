@@ -20,4 +20,11 @@ The first problem with the NADEX data is that it is in a PDF format, and we woul
 
 Once the data is read into Python, one object of interest is to assess if there are market inefficiencies on the NADEX platform that can be exploited by prospective traders. I focus here on binary options, which offer an effective case for illustration of a potential strategy. Binary options, also called digital options, can be approximately replicated using two call options with very close strike prices, as shown in the diagram below.   
 
+![alt text](https://github.com/a-mkj/NADEX-Scraper-Portfolio-Replication/blob/main/binary_call_replication.png?raw=true)
+
+I restrict this exercise to S&P500 binary options, and extract the corresponding call options from CBOE (https://datashop.cboe.com). The matching process first matches NADEX options to the closest timestamped CBOE option trade, and then searches for the closest possible strike prices. The long call is chosen to be the nearest strike below the NADEX strike, and the short call is the closest strike above the long strike. The code that does this is in nadex_call_replication.py.
+
+
+    
+
 
