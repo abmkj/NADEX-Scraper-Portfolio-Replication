@@ -18,7 +18,7 @@ NADEX data is available in PDF format from its website. Conveniently, the URLs o
 
 The first problem with the NADEX data is that it is in a PDF format, and we would like to have the data readable as a dataframe. This is overcome using the tabula package in Python (https://pypi.org/project/tabula-py/), that uses OCR to read tables in PDFs as Pandas dataframes. 
 
-Once the data is read into Python, one object of interest is to assess if there are market inefficiencies on the NADEX platform that can be exploited by prospective traders. I focus here on binary options, which offer an effective case for illustration of a potential strategy. Binary options, also called digital options, can be approximately replicated using two call options with very close strike prices, as shown in the diagram below.   
+Once the data is read into Python, one object of interest is to assess if there are market inefficiencies on the NADEX platform that can be exploited by prospective traders. I focus here on binary options, which offer an effective case for illustration of a potential strategy. Binary options, also called digital options, can be approximately replicated using two call options with very close strike prices, as shown in the diagram below (credit to: https://quant.stackexchange.com/users/601/smallchess).   
 
 ![alt text](https://github.com/a-mkj/NADEX-Scraper-Portfolio-Replication/blob/main/binary_call_replication.png?raw=true)
 
